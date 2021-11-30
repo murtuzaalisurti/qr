@@ -30,7 +30,14 @@ function generate(){
     download_link.innerText = "Download";
     download.appendChild(download_link);
 
-    setTimeout(() => {
-        download_link.setAttribute("href", `${document.querySelector(".qr-code img").getAttribute("src")}`);
-    }, 300);
+    if(document.querySelector(".qr-code img").getAttribute("src") == null){
+        setTimeout(() => {
+            download_link.setAttribute("href", `${document.querySelector("canvas").toDataURL()}`);
+        }, 300);
+    } else {
+        setTimeout(() => {
+            download_link.setAttribute("href", `${document.querySelector(".qr-code img").getAttribute("src")}`);
+        }, 300);
+    }
+
 }
