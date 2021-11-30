@@ -26,7 +26,7 @@ function generate(){
     document.querySelector(".qr-code").appendChild(download);
 
     let download_link = document.createElement("a");
-    download_link.setAttribute("download", "");
+    download_link.setAttribute("download", "qr_code.png");
     download_link.innerText = "Download";
     download.appendChild(download_link);
 
