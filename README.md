@@ -1,5 +1,5 @@
-# LinQ
-A simple QR Code Generator Web Application! Generate as well as download QR codes for URLs real quick!
+# QRCodes
+A Simple QR Code Generator Web Application! Generate as well as download QR codes for anything real quick!
 
 ## Tech Stack
 <pre>
