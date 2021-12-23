@@ -11,6 +11,7 @@ btn.addEventListener("click", () => {
         }
     } else {
         console.log("not valid input");
+        document.querySelector(".qr-code").style = "display: none";
     }
 })
 
