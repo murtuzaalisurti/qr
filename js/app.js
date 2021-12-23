@@ -1,30 +1,31 @@
-
 let btn = document.querySelector(".button");
 
 btn.addEventListener("click", () => {
-    let input_url = document.querySelector("#url");
-    if(document.querySelector(".qr-code").childElementCount == 0){
-        generate(input_url);
-    } else{
-        document.querySelector(".qr-code").innerHTML = "";
-        generate(input_url);
+    let user_input = document.querySelector("#input_text");
+    if(user_input.value != "") {
+        if(document.querySelector(".qr-code").childElementCount == 0){
+            generate(user_input);
+        } else{
+            document.querySelector(".qr-code").innerHTML = "";
+            generate(user_input);
+        }
+    } else {
+        console.log("not valid input");
     }
 })
 
-function generate(input_url){
+function generate(user_input){
 
     document.querySelector(".qr-code").style = "";
 
     var qrcode = new QRCode(document.querySelector(".qr-code"), {
-        text: `${input_url.value}`,
+        text: `${user_input.value}`,
         width: 180, //128
         height: 180,
         colorDark : "#000000",
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.H
     });
-
-    console.log(qrcode);
 
     let download = document.createElement("button");
     document.querySelector(".qr-code").appendChild(download);
@@ -44,5 +45,4 @@ function generate(input_url){
             download_link.setAttribute("href", `${document.querySelector(".qr-code img").getAttribute("src")}`);
         }, 300);
     }
-
 }
