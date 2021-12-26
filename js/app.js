@@ -42,12 +42,12 @@ function generate(user_input){
     let qr_code_canvas = document.querySelector("canvas");
 
     if(qr_code_img.getAttribute("src") == null){
-        setTimeout(() => {
-            download_link.setAttribute("href", `${qr_code_canvas.toDataURL()}`);
-        }, 300);
+        // setTimeout(() => {
+        // }, 300);
+        download_link.setAttribute("href", `${qr_code_canvas.toDataURL()}`);
     } else {
-        setTimeout(() => {
-            download_link.setAttribute("href", `${qr_code_img.getAttribute("src")}`);
-        }, 300);
+        // setTimeout(() => {
+        // }, 300);
+        download_link.setAttribute("href", `${qr_code_img.getAttribute("src")}`);
     }
 }
