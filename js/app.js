@@ -28,7 +28,7 @@ function generate(user_input){
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.H
     });
-
+    
     let download = document.createElement("button");
     qr_code_element.appendChild(download);
 
@@ -42,12 +42,8 @@ function generate(user_input){
     let qr_code_canvas = document.querySelector("canvas");
 
     if(qr_code_img.getAttribute("src") == null){
-        // setTimeout(() => {
-        // }, 300);
         download_link.setAttribute("href", `${qr_code_canvas.toDataURL()}`);
     } else {
-        // setTimeout(() => {
-        // }, 300);
         download_link.setAttribute("href", `${qr_code_img.getAttribute("src")}`);
     }
 }
