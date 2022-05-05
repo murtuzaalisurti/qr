@@ -11,14 +11,14 @@ btn.addEventListener("click", () => {
             generate(user_input);
         }
     } else {
-        console.log("not valid input");
-        qr_code_element.style = "display: none";
+        document.querySelector(".error").style = '';
+        document.querySelector(".error").innerHTML = "Invalid Input!";
     }
 })
 
 function generate(user_input) {
 
-    qr_code_element.style = "";
+    document.querySelector(".error").style = 'display: none;';
 
     var qrcode = new QRCode(qr_code_element, {
         text: `${user_input.value}`,

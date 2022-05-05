@@ -66,6 +66,16 @@ body{
             align-items: center;
             width: 100%;
 
+            .error {
+                font-family: 'Poppins', sans-serif;
+                font-size: 2rem;
+                background-color: black;
+                color: white;
+                padding: 1rem;
+                border: 0.2rem solid red;
+                border-radius: 0.8rem;
+            }
+
             label{
                 text-align: center;
                 font-size: 1.5rem;

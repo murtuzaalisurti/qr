@@ -95,6 +95,16 @@ body .user-input-section .user-input {
   width: 100%;
 }
 
+body .user-input-section .user-input .error {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border: 0.2rem solid red;
+  border-radius: 0.8rem;
+}
+
 body .user-input-section .user-input label {
   text-align: center;
   font-size: 1.5rem;
