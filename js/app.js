@@ -3,10 +3,10 @@ let qr_code_element = document.querySelector(".qr-code");
 
 btn.addEventListener("click", () => {
     let user_input = document.querySelector("#input_text");
-    if(user_input.value != "") {
-        if(qr_code_element.childElementCount == 0){
+    if (user_input.value != "") {
+        if (qr_code_element.childElementCount == 0) {
             generate(user_input);
-        } else{
+        } else {
             qr_code_element.innerHTML = "";
             generate(user_input);
         }
@@ -16,7 +16,7 @@ btn.addEventListener("click", () => {
     }
 })
 
-function generate(user_input){
+function generate(user_input) {
 
     qr_code_element.style = "";
 
@@ -24,9 +24,9 @@ function generate(user_input){
         text: `${user_input.value}`,
         width: 180, //128
         height: 180,
-        colorDark : "#000000",
-        colorLight : "#ffffff",
-        correctLevel : QRCode.CorrectLevel.H
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
     });
 
     let download = document.createElement("button");
@@ -41,7 +41,7 @@ function generate(user_input){
     let qr_code_img = document.querySelector(".qr-code img");
     let qr_code_canvas = document.querySelector("canvas");
 
-    if(qr_code_img.getAttribute("src") == null){
+    if (qr_code_img.getAttribute("src") == null) {
         setTimeout(() => {
             download_link.setAttribute("href", `${qr_code_canvas.toDataURL()}`);
         }, 300);
@@ -55,3 +55,12 @@ function generate(user_input){
 generate({
     value: 'https://murtuzaalisurti.github.io/qr'
 })
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then(res => console.log("service worker registered"))
+            .catch(err => console.log("service worker not registered", err))
+    })
+}
