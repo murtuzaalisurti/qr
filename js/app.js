@@ -34,7 +34,7 @@ function generate(user_input){
 
     let download_link = document.createElement("a");
     download_link.setAttribute("download", "qr_code.png");
-    download_link.innerText = "Download";
+    download_link.innerHTML = `Download <i class="fa-solid fa-download"></i>`;
 
     download.appendChild(download_link);
 
@@ -51,3 +51,7 @@ function generate(user_input){
         }, 300);
     }
 }
+
+generate({
+    value: 'https://murtuzaalisurti.github.io/qr'
+})
