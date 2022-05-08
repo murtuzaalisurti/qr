@@ -53,7 +53,7 @@ function generate(user_input) {
 }
 
 generate({
-    value: 'https://murtuzaalisurti.github.io/qr'
+    value: 'https://qr-codes.vercel.app'
 })
 
 if ("serviceWorker" in navigator) {
