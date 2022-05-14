@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chivo:ital,wght@0,300;0,400;0,700;1,400&family=Fira+Code:wght@300;400;600;700&family=Inter:wght@300;400;500;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Libre+Baskerville&family=Merriweather&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Quicksand&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 </head>
 <body>
     <div class="user-input-section">
@@ -31,6 +32,10 @@
     <div class="qr-code-container">
         <div class="qr-code" style></div>
     </div>
+    <div id="reader"></div>
+    <button class="scan-btn">Scan</button>
+    <div class="res" style="color: white; font-size: 3rem;"></div>
     <script src="./js/app.js"></script>
+    <script src="./js/scanner.js"></script>
 </body>
 </html>
