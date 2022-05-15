@@ -1,5 +1,5 @@
 {
-  "name": "QRcode",
+  "name": "qrcodes",
   "version": "1.0.0",
   "description": "A Simple QR Code Generator Web Application! Generate as well as download QR codes for anything real quick!",
   "main": "server.js",
