@@ -16,17 +16,24 @@ button:hover {
 
 body {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
   background-color: #EAE6E5;
   background-color: #2B303A;
   height: 100vh;
+  max-height: fit-content;
 }
 @media screen and (max-width: 50em) {
   body {
     flex-direction: column;
     height: 100%;
   }
+}
+body .qr-code-generator-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
 body .heading {
   margin: 3rem 0 5rem 0;
@@ -90,7 +97,6 @@ body .user-input-section .user-input input {
   color: black;
 }
 body .user-input-section .user-input input::placeholder {
-  color: #EEE5E9;
   color: #2B303A;
 }
 body .button {

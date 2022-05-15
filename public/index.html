@@ -18,29 +18,38 @@
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 </head>
 <body>
-    <div class="user-input-section">
-        <section class="heading">
-            <div class="title">QRcodes</div>
-            <div class="sub-title">Generate QRCode for anything!</div>
-        </section>
-        <section class="user-input">
-            <input type="text" placeholder="Type something..." name="input_text" id="input_text" autocomplete="off">
-            <button class="button" type="submit">Generate<i class="fa-solid fa-rotate"></i></button>
-            <div class="error" style="display: none;"></div>
-        </section>
+    <div class="select-section">
+        <button>Generate</button>
+        <button>Scan</button>
     </div>
-    <div class="qr-code-container">
-        <div class="qr-code" style></div>
+    <div class="qr-code-generator-sec">
+        <div class="user-input-section">
+            <section class="heading">
+                <div class="title">QRcodes</div>
+                <div class="sub-title">Generate QRCode for anything!</div>
+            </section>
+            <section class="user-input">
+                <input type="text" placeholder="Type something..." name="input_text" id="input_text" autocomplete="off">
+                <button class="button" type="submit">Generate<i class="fa-solid fa-rotate"></i></button>
+                <div class="error" style="display: none;"></div>
+            </section>
+        </div>
+        <div class="qr-code-container">
+            <div class="qr-code" style></div>
+        </div>
     </div>
-    <div id="reader"></div>
-    <button class="scan-btn">Request Permission</button>
-    <select name="cameras" id="camera">
-        <option value="Select device" disabled selected>Select Device</option>
-    </select>
-    <button class="scan">Scan</button>
-    <button class="stop-btn">Stop</button>
-    
-    <div class="res" style="color: white; font-size: 3rem;"></div>
+
+    <div class="qr-code-reader-sec" style="display: none;">
+        <div id="reader"></div>
+        <button class="scan-btn">Request Permission</button>
+        <select name="cameras" id="camera">
+            <option value="Select device" disabled selected>Select Device</option>
+        </select>
+        <button class="scan">Scan</button>
+        <button class="stop-btn">Stop</button>
+        
+        <div class="res" style="color: white; font-size: 3rem;"></div>
+    </div>
     <script src="./js/app.js"></script>
     <script src="./js/scanner.js"></script>
 </body>

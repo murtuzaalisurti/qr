@@ -21,15 +21,23 @@ button:hover{
 
 body{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
     background-color: #EAE6E5;
     background-color: $primary-color;
     height: 100vh;
+    max-height: fit-content;
 
     @media screen and (max-width: 50em) {
         flex-direction: column;
         height: 100%;
+    }
+
+    .qr-code-generator-sec {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
     }
 
     .heading{
@@ -97,12 +105,10 @@ body{
                 color: black;
 
                 &::placeholder {
-                    color: $secondary-color;
+                    // color: $secondary-color;
                     color: $primary-color;
                 }
             }
-
-            
         }
     }
 
