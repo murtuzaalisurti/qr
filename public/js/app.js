@@ -56,6 +56,15 @@ generate({
     value: 'https://qr-codes.vercel.app'
 })
 
+// genrate vs scan
+
+document.querySelectorAll(".select-section button").forEach((ele) => {
+    ele.addEventListener("click", (e) => {
+        document.querySelector(`.${e.target.classList[1]}-sec`).style = "";
+        e.target.nextElementSibling == null ? (document.querySelector(`.${e.target.previousElementSibling.classList[1]}-sec`).style = "display: none;") : (document.querySelector(`.${e.target.nextElementSibling.classList[1]}-sec`).style = "display: none;");
+    })
+})
+
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
         navigator.serviceWorker

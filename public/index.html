@@ -19,10 +19,10 @@
 </head>
 <body>
     <div class="select-section">
-        <button>Generate</button>
-        <button>Scan</button>
+        <button class="enable-generater generator-link">Generate</button>
+        <button class="enable-reader reader-link">Scan</button>
     </div>
-    <div class="qr-code-generator-sec">
+    <div class="qr-code-generator-sec generator-link-sec">
         <div class="user-input-section">
             <section class="heading">
                 <div class="title">QRcodes</div>
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <div class="qr-code-reader-sec" style="display: none;">
+    <div class="qr-code-reader-sec reader-link-sec" style="display: none;">
         <div id="reader"></div>
         <button class="scan-btn">Request Permission</button>
         <select name="cameras" id="camera">
