@@ -17,11 +17,11 @@ button:hover {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background-color: #EAE6E5;
-  background-color: #2B303A;
+  background-color: #344966;
   height: 100vh;
   max-height: fit-content;
+  position: relative;
 }
 @media screen and (max-width: 50em) {
   body {
@@ -29,25 +29,58 @@ body {
     height: 100%;
   }
 }
+body .select-section {
+  position: absolute;
+  top: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body .select-section .toggle-btn {
+  background-color: #2B3D55;
+  outline: none;
+  border: 0.2rem solid transparent;
+  color: #F0F4EF;
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  border-radius: 0.6rem;
+  font-family: "Poppins", sans-serif;
+}
 body .qr-code-generator-sec {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
+  padding: 30rem 0 5rem 0;
+}
+@media screen and (max-width: 50em) {
+  body .qr-code-generator-sec {
+    flex-direction: column;
+  }
+}
+body .qr-code-reader-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 30rem 0 5rem 0;
 }
 body .heading {
-  margin: 3rem 0 5rem 0;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 body .title, body .sub-title {
   font-size: 4rem;
   text-align: center;
   font-family: "Poppins", sans-serif;
   color: #12130F;
-  color: #EEE5E9;
+  color: #F0F4EF;
 }
 body .sub-title {
   font-size: 1.5rem;
-  color: #EEE5E9;
+  color: #F0F4EF;
   opacity: 0.5;
 }
 body .user-input-section {
@@ -90,14 +123,14 @@ body .user-input-section .user-input input {
   border: none;
   border-radius: 0.5rem;
   background-color: rgba(155, 135, 116, 0.6784313725);
-  background-color: #7C7C7C;
+  background-color: #B4CDED;
   text-align: center;
   padding: 1.5rem 1rem;
   margin: 1rem 1rem 2rem 1rem;
   color: black;
 }
 body .user-input-section .user-input input::placeholder {
-  color: #2B303A;
+  color: #344966;
 }
 body .button {
   outline: none;
@@ -106,7 +139,7 @@ body .button {
   padding: 1.5rem 2.5rem;
   margin-bottom: 3rem;
   background-color: rgba(91, 146, 121, 0.6156862745);
-  background-color: #92DCE5;
+  background-color: #BFCC94;
   color: black;
   font-family: "Nunito", sans-serif;
   font-size: 1.6rem;
@@ -129,7 +162,7 @@ body .qr-code-container {
 body .qr-code-container .qr-code {
   display: flex;
   border-radius: 1rem;
-  background-color: rgba(124, 124, 124, 0.2);
+  background-color: rgba(255, 255, 255, 0.041);
   width: fit-content;
   flex-direction: column;
   justify-content: space-between;
@@ -139,6 +172,7 @@ body .qr-code-container .qr-code button {
   display: flex;
   justify-content: center;
   background-color: #1f1f1f;
+  background-color: #58565A;
   color: #EAE6E5;
   border: none;
   outline: none;

@@ -18,16 +18,20 @@
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 </head>
 <body>
+    <section class="heading">
+        <div class="title">QRcodes</div>
+        <div class="sub-title">Generate QRCode for anything!</div>
+    </section>
     <div class="select-section">
-        <button class="enable-generater generator-link">Generate</button>
-        <button class="enable-reader reader-link">Scan</button>
+        <button class="enable-generater generator-link toggle-btn">Generator</button>
+        <button class="enable-reader reader-link toggle-btn">Scanner</button>
     </div>
     <div class="qr-code-generator-sec generator-link-sec">
         <div class="user-input-section">
-            <section class="heading">
+            <!-- <section class="heading">
                 <div class="title">QRcodes</div>
                 <div class="sub-title">Generate QRCode for anything!</div>
-            </section>
+            </section> -->
             <section class="user-input">
                 <input type="text" placeholder="Type something..." name="input_text" id="input_text" autocomplete="off">
                 <button class="button" type="submit">Generate<i class="fa-solid fa-rotate"></i></button>

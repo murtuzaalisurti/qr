@@ -1,8 +1,9 @@
-$primary-color: #2B303A;
-$secondary-color: #EEE5E9;
-$tertiary-color: #7C7C7C;
-$qr-code: #7c7c7c33;
-$button-color: #92DCE5;
+$primary-color: #344966; //2F2235 2B303A
+$secondary-color: #F0F4EF;
+$tertiary-color: #B4CDED; // BFC3BA 7C7C7C
+$qr-code: rgba(255, 255, 255, 0.041);
+$button-color: #BFCC94; // 8DAA9D 92DCE5
+$toggle-btn-color: #2B3D55;
 
 :root{
     font-size: 62.5%;
@@ -22,26 +23,65 @@ button:hover{
 body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     background-color: #EAE6E5;
     background-color: $primary-color;
     height: 100vh;
     max-height: fit-content;
+    position: relative;
 
     @media screen and (max-width: 50em) {
         flex-direction: column;
         height: 100%;
     }
 
+    .select-section {
+        position: absolute;
+        top: 20rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .toggle-btn {
+            background-color: $toggle-btn-color;
+            outline: none;
+            border: 0.2rem solid transparent;
+            color: $secondary-color;
+            padding: 1rem 2rem;
+            margin: 0 1rem;
+            border-radius: 0.6rem;
+            font-family: 'Poppins', sans-serif;
+            // box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+
     .qr-code-generator-sec {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100vw;
+        width: 100%;
+        padding: 30rem 0 5rem 0;
+
+        @media screen and (max-width: 50em) {
+            flex-direction: column;
+            // height: 100%;
+        }
+    }
+
+    .qr-code-reader-sec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 30rem 0 5rem 0;
     }
 
     .heading{
-        margin: 3rem 0 5rem 0;
+        position: absolute;
+        top: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        // margin: 3rem 0 5rem 0;
     }
     .title, .sub-title{
         font-size: 4rem;
@@ -154,6 +194,7 @@ body{
                 display: flex;
                 justify-content: center;
                 background-color: #1f1f1f;
+                background-color: #58565A;
                 color: #EAE6E5;
                 border: none;
                 outline: none;
