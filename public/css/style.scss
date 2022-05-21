@@ -1,8 +1,10 @@
-$primary-color: #344966; //2F2235 2B303A
+// author: Murtuzaali Surti
+
+$primary-color: #344966;
 $secondary-color: #F0F4EF;
-$tertiary-color: #B4CDED; // BFC3BA 7C7C7C
+$tertiary-color: #B4CDED;
 $qr-code: rgba(255, 255, 255, 0.041);
-$button-color: #BFCC94; // 8DAA9D 92DCE5
+$button-color: #BFCC94;
 $toggle-btn-color: #2B3D55;
 
 :root{
@@ -71,6 +73,95 @@ body{
         justify-content: center;
         width: 100%;
         padding: 30rem 0 5rem 0;
+
+        .scan-btn {
+            opacity: 1;
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+        }
+
+        .error-msg {
+            padding: 2rem 3rem;
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 2rem;
+            background-color: rgb(206 0 0 / 34%);
+            color: $secondary-color;
+            border-radius: 1rem;
+            font-family: 'Poppins', sans-serif;
+
+            i {
+                font-size: 3.5rem;
+                color: #ff9292;
+            }
+        }
+
+        #camera {
+            padding: 1rem 2rem;
+            background-color: $button-color;
+            color: black;
+            border: none;
+            border-radius: 0.5rem;
+            margin: 2rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            transform: translateX(0);
+
+            @keyframes shiver {
+                0%{
+                    transform: translateX(0);
+                }
+                25%{
+                    transform: translateX(3%);
+                }
+                75%{
+                    transform: translateX(-3%);
+                }
+                100%{
+                    transform: translateX(0);
+                }
+            }
+
+            &:focus {
+                animation: shiver 0.3s ease-in-out;
+            }
+        }
+
+        .controls {
+            margin: 2rem 0;
+
+            .ctrl-button {
+                background-color: $toggle-btn-color;
+                outline: none;
+                border: 0.2rem solid transparent;
+                color: $secondary-color;
+                padding: 1rem 2rem;
+                margin: 0 1rem;
+                border-radius: 0.6rem;
+                font-family: 'Poppins', sans-serif;
+                opacity: 1;
+
+                &:disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        .res {
+            color: white;
+            font-size: 2rem;
+            background-color: #bfcc9433;
+            width: 80%;
+            max-width: fit-content;
+            padding: 2rem;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 1rem;
+            text-align: center;
+        }
     }
 
     .heading{
@@ -191,8 +282,8 @@ body{
             button{
                 display: flex;
                 justify-content: center;
-                background-color: #58565A;
-                color: #EAE6E5;
+                background-color: $button-color;
+                color: black;
                 border: none;
                 outline: none;
                 width: 100%; 
@@ -205,7 +296,7 @@ body{
                     width: 100%;
                     height: 100%;
                     text-decoration: none;
-                    color: #EAE6E5;
+                    color: black;
                     padding: 1rem;
 
                     i {

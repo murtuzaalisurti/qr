@@ -65,6 +65,84 @@ body .qr-code-reader-sec {
   width: 100%;
   padding: 30rem 0 5rem 0;
 }
+body .qr-code-reader-sec .scan-btn {
+  opacity: 1;
+}
+body .qr-code-reader-sec .scan-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+body .qr-code-reader-sec .error-msg {
+  padding: 2rem 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2rem;
+  background-color: rgba(206, 0, 0, 0.34);
+  color: #F0F4EF;
+  border-radius: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+body .qr-code-reader-sec .error-msg i {
+  font-size: 3.5rem;
+  color: #ff9292;
+}
+body .qr-code-reader-sec #camera {
+  padding: 1rem 2rem;
+  background-color: #BFCC94;
+  color: black;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  transform: translateX(0);
+}
+@keyframes shiver {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(3%);
+  }
+  75% {
+    transform: translateX(-3%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+body .qr-code-reader-sec #camera:focus {
+  animation: shiver 0.3s ease-in-out;
+}
+body .qr-code-reader-sec .controls {
+  margin: 2rem 0;
+}
+body .qr-code-reader-sec .controls .ctrl-button {
+  background-color: #2B3D55;
+  outline: none;
+  border: 0.2rem solid transparent;
+  color: #F0F4EF;
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  border-radius: 0.6rem;
+  font-family: "Poppins", sans-serif;
+  opacity: 1;
+}
+body .qr-code-reader-sec .controls .ctrl-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+body .qr-code-reader-sec .res {
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(191, 204, 148, 0.2);
+  width: 80%;
+  max-width: fit-content;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 1rem;
+  text-align: center;
+}
 body .heading {
   position: absolute;
   top: 5rem;
@@ -173,8 +251,8 @@ body .qr-code-container .qr-code {
 body .qr-code-container .qr-code button {
   display: flex;
   justify-content: center;
-  background-color: #58565A;
-  color: #EAE6E5;
+  background-color: #BFCC94;
+  color: black;
   border: none;
   outline: none;
   width: 100%;
@@ -187,7 +265,7 @@ body .qr-code-container .qr-code button a {
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: #EAE6E5;
+  color: black;
   padding: 1rem;
 }
 body .qr-code-container .qr-code button a i {

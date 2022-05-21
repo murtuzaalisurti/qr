@@ -23,15 +23,11 @@
         <div class="sub-title">Generate QRCode for anything!</div>
     </section>
     <div class="select-section">
-        <button class="enable-generater generator-link toggle-btn">Generator</button>
+        <button class="enable-generater generator-link toggle-btn" style="border-color: #F0F4EF">Generator</button>
         <button class="enable-reader reader-link toggle-btn">Scanner</button>
     </div>
     <div class="qr-code-generator-sec generator-link-sec">
         <div class="user-input-section">
-            <!-- <section class="heading">
-                <div class="title">QRcodes</div>
-                <div class="sub-title">Generate QRCode for anything!</div>
-            </section> -->
             <section class="user-input">
                 <input type="text" placeholder="Type something..." name="input_text" id="input_text" autocomplete="off">
                 <button class="button" type="submit">Generate<i class="fa-solid fa-rotate"></i></button>
@@ -45,14 +41,17 @@
 
     <div class="qr-code-reader-sec reader-link-sec" style="display: none;">
         <div id="reader"></div>
-        <button class="scan-btn">Request Permission</button>
-        <select name="cameras" id="camera">
-            <option value="Select device" disabled selected>Select Device</option>
+        <button class="scan-btn button">Allow access to camera</button>
+        <div class="error-msg" style="display: none;"><i class="fa-solid fa-triangle-exclamation"></i><br />Permission denied!<br /> Please allow access to camera and reload the page!</div>
+        <select name="cameras" id="camera" style="display: none;">
+            <option value="" disabled selected>Select Device</option>
         </select>
-        <button class="scan">Scan</button>
-        <button class="stop-btn">Stop</button>
+        <div class="controls">
+            <button class="scan ctrl-button" style="display: none;">Scan</button>
+            <button class="stop-btn ctrl-button" style="display: none;">Stop</button>
+        </div>
         
-        <div class="res" style="color: white; font-size: 3rem;"></div>
+        <div class="res" style="display: none;"></div>
     </div>
     <script src="./js/app.js"></script>
     <script src="./js/scanner.js"></script>
