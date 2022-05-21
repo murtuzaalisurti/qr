@@ -23,8 +23,6 @@ button:hover{
 body{
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    background-color: #EAE6E5;
     background-color: $primary-color;
     height: 100vh;
     max-height: fit-content;
@@ -40,6 +38,7 @@ body{
         top: 20rem;
         left: 50%;
         transform: translateX(-50%);
+        width: fit-content;
 
         .toggle-btn {
             background-color: $toggle-btn-color;
@@ -50,7 +49,6 @@ body{
             margin: 0 1rem;
             border-radius: 0.6rem;
             font-family: 'Poppins', sans-serif;
-            // box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.1);
         }
     }
 
@@ -63,7 +61,6 @@ body{
 
         @media screen and (max-width: 50em) {
             flex-direction: column;
-            // height: 100%;
         }
     }
 
@@ -81,13 +78,11 @@ body{
         top: 5rem;
         left: 50%;
         transform: translateX(-50%);
-        // margin: 3rem 0 5rem 0;
     }
     .title, .sub-title{
         font-size: 4rem;
         text-align: center;
         font-family: 'Poppins', sans-serif;
-        color: #12130F;
         color: $secondary-color;
     }
     .sub-title{
@@ -98,21 +93,28 @@ body{
 
     .user-input-section {
 
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
         width: 40%;
+        background-color: rgb(255 255 255 / 4%);
+        height: 100%;
+        justify-content: center;
+        border-radius: 1rem;
 
         @media screen and (max-width: 50em) {
-            width: 100%;
             margin: 2rem 0 0 0;
+            width: 85%;
+            padding: 2.5rem;
         }
 
         .user-input{
+
+            align-items: center;
             display: flex;
             flex-direction: column;
-            align-items: center;
             width: 100%;
+            justify-content: center;
 
             .error {
                 font-family: 'Poppins', sans-serif;
@@ -137,15 +139,13 @@ body{
                 outline: none;
                 border: none;
                 border-radius: 0.5rem;
-                background-color: #9b8774ad;
                 background-color: $tertiary-color;
                 text-align: center;
                 padding: 1.5rem 1rem;
-                margin: 1rem 1rem 2rem 1rem;
+                margin: 1rem 0rem 2rem 0rem;
                 color: black;
 
                 &::placeholder {
-                    // color: $secondary-color;
                     color: $primary-color;
                 }
             }
@@ -157,8 +157,6 @@ body{
         border: none;
         border-radius: 0.5rem;
         padding: 1.5rem 2.5rem;
-        margin-bottom: 3rem;
-        background-color: #5b92799d;
         background-color: $button-color;
         color: black;
         font-family: 'Nunito', sans-serif;
@@ -173,7 +171,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40%;
+        width: 30%;
 
         @media screen and (max-width: 50em) {
             width: 100%;
@@ -193,7 +191,6 @@ body{
             button{
                 display: flex;
                 justify-content: center;
-                background-color: #1f1f1f;
                 background-color: #58565A;
                 color: #EAE6E5;
                 border: none;
