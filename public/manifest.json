@@ -5,9 +5,9 @@
     "orientation": "portrait",
     "scope": "/",
     "start_url": "index.html",
-    "name": "QRcodes",
+    "name": "QRCodes",
     "short_name": "QRCodes",
-    "description": "Generate QRCode for anything!",
+    "description": "Generate as well as Scan QR Codes!",
     "icons": [
         {
             "src": "/images/icon-192x192.png",
