@@ -30,6 +30,20 @@ body{
     max-height: fit-content;
     position: relative;
 
+    &::-webkit-scrollbar {
+        width: 0.8rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(112 129 154);
+        border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 1rem;
+    }
+
     @media screen and (max-width: 50em) {
         flex-direction: column;
         height: 100%;
@@ -154,13 +168,43 @@ body{
         .res {
             color: white;
             font-size: 2rem;
-            background-color: #bfcc9433;
+            background-color: rgb(80 103 136 / 63%);
             width: 80%;
             max-width: fit-content;
             padding: 2rem;
             font-family: 'Poppins', sans-serif;
+            border: 0.3rem solid rgb(139 160 191 / 63%);
             border-radius: 1rem;
             text-align: center;
+            overflow: auto;
+            white-space: nowrap;
+            margin: 2rem 0;
+
+            &::-webkit-scrollbar {
+                height: 0.55rem;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgb(112 129 154);
+                border-radius: 1rem;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: transparent;
+                border-radius: 1rem;
+            }
+        }
+
+        .copy-btn {
+            background-color: $toggle-btn-color;
+            outline: none;
+            border: 0.2rem solid transparent;
+            color: $secondary-color;
+            padding: 1rem 2rem;
+            margin: 0 0 2rem 0;
+            border-radius: 0.6rem;
+            font-family: 'Poppins', sans-serif;
+            opacity: 1;
         }
     }
 

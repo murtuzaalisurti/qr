@@ -45,9 +45,11 @@ function scan(){
                         },
                         (decodedText, decodedResult) => {
                             
-                            document.querySelector(".res").innerHTML = `${decodedText}`;
+                            document.querySelector(".res").innerText = `${decodedText}`;
                             document.querySelector(".res").style = "";
+                            document.querySelector(".copy-btn").style = "";
                             console.log(`Code matched = ${decodedResult}`);
+                            document.querySelector(".res").scrollIntoView({behavior: "smooth"});
                             scanner.pause(true);
                         },
                         (errorMessage) => {
@@ -85,11 +87,34 @@ document.querySelector('.stop-btn').addEventListener('click', () => {
     stopScan();
 })
 
+document.querySelector('.copy-btn').addEventListener('click', (e) => {
+    if(navigator.clipboard) {
+        navigator.clipboard.writeText(e.target.previousElementSibling.innerText).then(() => {
+            e.target.innerHTML = `Copied <i class="fa-solid fa-check"></i>`;
+            setTimeout(() => {
+                e.target.innerHTML = "Copy";
+            }, 1500)
+        }).catch((err) => {
+            console.error(err);
+            e.target.innerHTML = `Copy failed <i class="fa-solid fa-xmark"></i>`;
+            setTimeout(() => {
+                e.target.innerHTML = "Copy";
+            }, 1500)
+        })
+    } else {
+        e.target.innerHTML = `Copy failed <i class="fa-solid fa-xmark"></i>`;
+        setTimeout(() => {
+            e.target.innerHTML = "Copy";
+        }, 1500)
+    }
+})
+
 function stopScan() {
     scanner.stop().then((ignore) => {
         // QR Code scanning is stopped.
         console.log('Scan stopped')
         document.querySelector(".res").style = "display: none;";
+        document.querySelector(".copy-btn").style = "display: none;";
         document.querySelector('.scan').disabled = false;
         document.querySelector('.stop-btn').disabled = true;
         document.querySelector('.stop-btn').style = "display: none";

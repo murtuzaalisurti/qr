@@ -22,6 +22,17 @@ body {
   max-height: fit-content;
   position: relative;
 }
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(112, 129, 154);
+  border-radius: 1rem;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 1rem;
+}
 @media screen and (max-width: 50em) {
   body {
     flex-direction: column;
@@ -135,13 +146,39 @@ body .qr-code-reader-sec .controls .ctrl-button:disabled {
 body .qr-code-reader-sec .res {
   color: white;
   font-size: 2rem;
-  background-color: rgba(191, 204, 148, 0.2);
+  background-color: rgba(80, 103, 136, 0.63);
   width: 80%;
   max-width: fit-content;
   padding: 2rem;
   font-family: "Poppins", sans-serif;
+  border: 0.3rem solid rgba(139, 160, 191, 0.63);
   border-radius: 1rem;
   text-align: center;
+  overflow: auto;
+  white-space: nowrap;
+  margin: 2rem 0;
+}
+body .qr-code-reader-sec .res::-webkit-scrollbar {
+  height: 0.55rem;
+}
+body .qr-code-reader-sec .res::-webkit-scrollbar-thumb {
+  background-color: rgb(112, 129, 154);
+  border-radius: 1rem;
+}
+body .qr-code-reader-sec .res::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 1rem;
+}
+body .qr-code-reader-sec .copy-btn {
+  background-color: #2B3D55;
+  outline: none;
+  border: 0.2rem solid transparent;
+  color: #F0F4EF;
+  padding: 1rem 2rem;
+  margin: 0 0 2rem 0;
+  border-radius: 0.6rem;
+  font-family: "Poppins", sans-serif;
+  opacity: 1;
 }
 body .heading {
   position: absolute;
