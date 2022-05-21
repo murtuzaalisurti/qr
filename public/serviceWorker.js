@@ -2,8 +2,9 @@ const qrcodes = "qrcodes"
 const assets = [
     "/",
     "/index.html",
-    "/css/style.css",
+    "/css/output.css",
     "/js/app.js",
+    "/js/scanner.js"
 ]
 
 self.addEventListener("install", installEvent => {
