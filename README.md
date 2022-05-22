@@ -1,11 +1,11 @@
 # QRCodes
-A Simple QR Code Generator Web Application! Generate as well as download QR codes for anything real quick!
+A QR Code Generator and Reader! Generate as well as scan QR codes real quick!
 
 ## Tech Stack
 <pre>
 HTML
 CSS
-Vanilla JavaScript
+JavaScript
 </pre>
 
 ## Tools used
