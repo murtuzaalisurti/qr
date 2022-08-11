@@ -1,0 +1,4 @@
+package.json
+package-lock.json
+public/js/minified/
+public/css/output.css

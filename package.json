@@ -9,7 +9,8 @@
     "dev": "nodemon server.js",
     "sass": "sass --watch --no-source-map public/css/style.scss:public/css/style.css",
     "post": "postcss public/css/style.css -u autoprefixer cssnano -o public/css/output.css --no-map --watch",
-    "minjs": "terser public/js/app.js public/js/scanner.js -c -m -o public/js/minified/prod.min.js"
+    "minjs": "terser public/js/app.js public/js/scanner.js -c -m -o public/js/minified/prod.min.js",
+    "prepare": "is-ci || husky install"
   },
   "repository": {
     "type": "git",
@@ -29,8 +30,11 @@
   "devDependencies": {
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.7",
+    "husky": "^8.0.1",
+    "is-ci": "^3.0.1",
     "postcss": "^8.4.13",
     "postcss-cli": "^9.1.0",
+    "prettier": "^2.7.1",
     "sass": "^1.51.0"
   }
 }
