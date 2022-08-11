@@ -11,14 +11,13 @@ btn.addEventListener("click", () => {
             generate(user_input);
         }
     } else {
-        document.querySelector(".error").style = '';
+        document.querySelector(".error").style = "";
         document.querySelector(".error").innerHTML = "Invalid Input!";
     }
-})
+});
 
 function generate(user_input) {
-
-    document.querySelector(".error").style = 'display: none;';
+    document.querySelector(".error").style = "display: none;";
 
     var qrcode = new QRCode(qr_code_element, {
         text: `${user_input.value}`,
@@ -26,7 +25,7 @@ function generate(user_input) {
         height: 180,
         colorDark: "#000000",
         colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H
+        correctLevel: QRCode.CorrectLevel.H,
     });
 
     let download = document.createElement("button");
@@ -47,32 +46,48 @@ function generate(user_input) {
         }, 300);
     } else {
         setTimeout(() => {
-            download_link.setAttribute("href", `${qr_code_img.getAttribute("src")}`);
+            download_link.setAttribute(
+                "href",
+                `${qr_code_img.getAttribute("src")}`
+            );
         }, 300);
     }
 }
 
 generate({
-    value: 'https://qr-codes.vercel.app'
-})
+    value: "https://qr-codes.vercel.app",
+});
 
 // genrate vs scan
 
 document.querySelectorAll(".select-section button").forEach((ele) => {
     ele.addEventListener("click", (e) => {
         document.querySelector(`.${e.target.classList[1]}-sec`).style = "";
-        e.target.nextElementSibling == null ? (document.querySelector(`.${e.target.previousElementSibling.classList[1]}-sec`).style = "display: none;") : (document.querySelector(`.${e.target.nextElementSibling.classList[1]}-sec`).style = "display: none;");
+        e.target.nextElementSibling == null
+            ? (document.querySelector(
+                  `.${e.target.previousElementSibling.classList[1]}-sec`
+              ).style = "display: none;")
+            : (document.querySelector(
+                  `.${e.target.nextElementSibling.classList[1]}-sec`
+              ).style = "display: none;");
 
-        document.querySelector(`.${e.target.classList[1]}`).style = "border-color: #F0F4EF";
-        e.target.nextElementSibling == null ? (document.querySelector(`.${e.target.previousElementSibling.classList[1]}`).style = "") : (document.querySelector(`.${e.target.nextElementSibling.classList[1]}`).style = "");
-    })
-})
+        document.querySelector(`.${e.target.classList[1]}`).style =
+            "border-color: #F0F4EF";
+        e.target.nextElementSibling == null
+            ? (document.querySelector(
+                  `.${e.target.previousElementSibling.classList[1]}`
+              ).style = "")
+            : (document.querySelector(
+                  `.${e.target.nextElementSibling.classList[1]}`
+              ).style = "");
+    });
+});
 
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
         navigator.serviceWorker
             .register("/serviceWorker.js")
-            .then(res => console.log("service worker registered"))
-            .catch(err => console.log("service worker not registered", err))
-    })
+            .then((res) => console.log("service worker registered"))
+            .catch((err) => console.log("service worker not registered", err));
+    });
 }
