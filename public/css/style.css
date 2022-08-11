@@ -45,6 +45,9 @@ body .select-section {
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 body .select-section .toggle-btn {
     background-color: #2b3d55;

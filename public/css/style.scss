@@ -55,6 +55,9 @@ body {
         left: 50%;
         transform: translateX(-50%);
         width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .toggle-btn {
             background-color: $toggle-btn-color;
