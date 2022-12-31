@@ -91,6 +91,13 @@ body {
         width: 100%;
         padding: 30rem 0 5rem 0;
 
+        #reader {
+            video {
+                width: 300px !important;
+                height: 300px !important;
+            }
+        }
+
         .scan-btn {
             opacity: 1;
 
