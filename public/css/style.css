@@ -79,10 +79,6 @@ body .qr-code-reader-sec {
     width: 100%;
     padding: 30rem 0 5rem 0;
 }
-body .qr-code-reader-sec #reader video {
-    width: 300px !important;
-    height: 300px !important;
-}
 body .qr-code-reader-sec .scan-btn {
     opacity: 1;
 }
