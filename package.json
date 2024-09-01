@@ -11,7 +11,7 @@
     "post": "postcss public/css/style.css -u autoprefixer cssnano -o public/css/output.css --no-map --watch",
     "minjs": "terser public/js/app.js public/js/scanner.js -c -m -o public/js/minified/prod.min.js",
     "prod": "terser public/js/app.js public/js/scanner.js -c -m -o public/js/minified/prod.min.js && prettier --write . && git add -A .",
-    "prepare": "is-ci || husky install"
+    "prepare": "is-ci || husky"
   },
   "repository": {
     "type": "git",
@@ -25,17 +25,18 @@
   },
   "homepage": "https://github.com/murtuzaalisurti/qr#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.1.1",
-    "express": "^4.18.1"
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "express": "^4.19.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
-    "cssnano": "^5.1.7",
-    "husky": "^8.0.1",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.5",
+    "husky": "^9.1.5",
     "is-ci": "^3.0.1",
-    "postcss": "^8.4.13",
-    "postcss-cli": "^9.1.0",
-    "prettier": "^2.7.1",
-    "sass": "^1.51.0"
+    "postcss": "^8.4.42",
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8",
+    "terser": "^5.31.6"
   }
 }

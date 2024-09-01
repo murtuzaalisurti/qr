@@ -47,15 +47,15 @@ function scan() {
                                     },
                                     (decodedText, decodedResult) => {
                                         document.querySelector(
-                                            ".res"
+                                            ".res",
                                         ).innerText = `${decodedText}`;
                                         document.querySelector(".res").style =
                                             "";
                                         document.querySelector(
-                                            ".copy-btn"
+                                            ".copy-btn",
                                         ).style = "";
                                         console.log(
-                                            `Code matched = ${decodedResult}`
+                                            `Code matched = ${decodedResult}`,
                                         );
                                         document
                                             .querySelector(".res")
@@ -66,15 +66,14 @@ function scan() {
                                     },
                                     (errorMessage) => {
                                         // console.error(`Code scan error = ${errorMessage}`);
-                                    }
+                                    },
                                 )
                                 .then(() => {
                                     console.log("camera started");
+                                    document.querySelector(".scan").disabled =
+                                        true;
                                     document.querySelector(
-                                        ".scan"
-                                    ).disabled = true;
-                                    document.querySelector(
-                                        ".stop-btn"
+                                        ".stop-btn",
                                     ).disabled = false;
                                     document.querySelector(".stop-btn").style =
                                         "";

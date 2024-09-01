@@ -11,7 +11,7 @@ self.addEventListener("install", (installEvent) => {
     installEvent.waitUntil(
         caches.open(qrcodes).then((cache) => {
             cache.addAll(assets);
-        })
+        }),
     );
 });
 
@@ -20,7 +20,7 @@ self.addEventListener("fetch", (fetchEvent) => {
         // network request first instead of cache
         fetch(fetchEvent.request).catch(function () {
             return caches.match(fetchEvent.request);
-        })
+        }),
 
         /*------------------------------------------*/
 
