@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js",
+    "dev": "npx nodemon server.js",
     "sass": "sass --watch --no-source-map public/css/style.scss:public/css/style.css",
     "post": "postcss public/css/style.css -u autoprefixer cssnano -o public/css/output.css --no-map --watch",
     "minjs": "terser public/js/app.js public/js/scanner.js -c -m -o public/js/minified/prod.min.js",
@@ -29,14 +29,14 @@
     "express": "^4.21.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "cssnano": "^7.0.6",
     "husky": "^9.1.7",
     "is-ci": "^4.1.0",
-    "postcss": "^8.5.2",
-    "postcss-cli": "^11.0.0",
-    "prettier": "^3.5.1",
-    "sass": "^1.85.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "prettier": "^3.5.3",
+    "sass": "^1.86.0",
     "terser": "^5.39.0"
   }
 }
